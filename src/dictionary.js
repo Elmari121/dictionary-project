@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "./dictionary.css"
 
@@ -6,7 +7,7 @@ export default function Dictionary() {
 
     function search(event) {
         event.preventDefault();
-        alert("searching...");
+        console.log("Searching for:", keyword); 
     }
 
     function handleKeyWordChange(event) {
@@ -14,13 +15,10 @@ export default function Dictionary() {
     }
 
     return (
-    <div className="dictionary">
-        <form onSubmit={search}>
-            <input type="search" onChange={handleKeyWordChange} />
-        </form>
-
-    </div>
-);
-     
+        <div className="dictionary">
+            <form onSubmit={search}>
+                <input type="search" onChange={handleKeyWordChange} />
+            </form>
+        </div>
+    );
 }
-
