@@ -14,11 +14,13 @@ export default function Dictionary() {
     }
 
     return (
-        <div className="dictionary">
-            <form onSubmit={search}>
-                <input type="search" onChange={handleKeyWordChange} />
-            </form>
-        </div>
-    );
+    <div className="dictionary">
+        <form onSubmit={search}>
+            <input type="search" onChange={handleKeyWordChange} />
+        </form>
+        <p>Current keyword: {keyword}</p> 
+    </div>
+);
+     
 }
 
